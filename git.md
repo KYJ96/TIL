@@ -92,8 +92,82 @@ commit은 이력을 확정짓는 명령어로, 해당 시점의 스냅샷을 기
 커밋시에는 반드시 메시지를 작성해야하며, 메시지는 변경사항을 알 수 있도록 명확하게 작성한다.
 
 ```bash
+$ git commit -m 'git 내용 추가'
+[master bcfd1e8] git 내용 추가
+ 1 file changed, 101 insertions(+)
 
 ```
+
+커밋 이후에는 아래의 명령어를 통해 지금까지 작성된 이력을 확인하자.
+
+```bash
+$ git log --oneline
+bcfd1e8 (HEAD -> master) git 내용 추가
+$ git log -1
+commit bcfd1e8a2920b45a4487c5cf28bff18f9955d490 (HEAD -> master)
+Author: KYJ96 <rnjsdydwns1110@gmail.comgit config --global user.email rnjsdydwns1110@gmail.comgit config --global user.email rnjsdydwns1110@gmail.com>
+Date:   Sat Dec 28 19:49:52 2019 +0900
+
+```
+
+커밋은 해시코드를 바탕으로 구분된다.
+
+## 원격 저장소(remote repository) 활용하기
+
+원격 저장소 기능을 제공하는 다양한 서비스 중에 github을 기준으로 설명한다.
+
+### 준비사항
+
+Github에 repository 생성
+
+### 1. 원격 저장소 등록
+
+```bash
+$ git remote add origin 깃허브 url
+```
+
+* 원격저장소(`remote`)로 `origin` 이라는 이름으로 `깃허브url` 을 등록`(add)`한다.
+
+* 등록된 원격 저장소 목록을 보기 위해서는 아래의 명령어를 활용한다.
+
+  ```bash
+  $ git remote -v
+  origin  https://github.com/KYJ96/TIL.git (fetch)
+  origin  https://github.com/KYJ96/TIL.git (push)
+  
+  ```
+
+### 2. `push` -원격저장소 업로드
+
+```bash
+$ git push origin master
+```
+
+`origin` 으로 설정된 원격저장소에 `master` 브랜치로 업로드`(push)` 이후 변경 사항이 생길 때마다, `add`-`commit`-`push` 를 반복하면 된다.
+
+그리고, 항상 모든 명령어 이후에 연관된 상태를 확인하자.
+
+`status` ,`log` ,`remote -v` 
+
+### 3. pull
+
+```bash
+$ git pull origin master
+```
+
+원격 저장소의 변경 사항을 받아온다.
+
+### 4. clone
+
+```bash
+$ git clone 깃허브url
+```
+
+원격 저장소를 복제한다.
+
+**주의! `init` 명령어와 같이 기억하자!** 
+
+
 
 
 
