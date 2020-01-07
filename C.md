@@ -63,6 +63,31 @@
 
 ## 4. 주석 (Comment)
 
+> 프로그램에 있어 내용을 메모하는 목적으로 쓰임.
+>
 > /* */ 만 지원(C89에서는)
 >
-> 
+> C, C++, Java, JavaScript의 경우는 한 줄 주석은 //, 여러 줄 주석은 /* */ 이다.
+
+
+
+### - C언어 주석의 형태
+
+>**예제**
+>
+>```C  
+>/* Hello World라는 문구를 출력 시켜주는
+>프로그램이다. */
+>#include <stdio.h>
+>int main(void)
+>{
+>    printf("Hello World \n"); //Hello World라는 문구를 출력한다.
+>	
+>    return 0;
+>}
+>```
+
+
+
+# C언어의 기본 문법
+
