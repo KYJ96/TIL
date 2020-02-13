@@ -34,7 +34,21 @@
 >   ```c
 >   char ch = 'A';
 >   
+>   char* const p = &ch;
+> *p = 'Z';
 >   ```
->
 >   
+>   
+>   
+> * 주소가 가리키는 값을 보호하는 const 포인터
+>
+>   ```c
+>   char ch1 = 'A';
+>   char ch2 = 'A';
+>   
+>   const char* p = &ch1;
+>   p= &ch2;
+>   ```
+
+
 
