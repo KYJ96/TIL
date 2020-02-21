@@ -78,13 +78,40 @@
 ## 두 문자열의 비교
 
 > ```c
->          compare_string(const char* str0, const char* str1);
+>                compare_string(const char* str0, const char* str1);
 > ```
 >
 > * 매개변수 : 두 문자열 포인터
+>
 > * 사전식 순서로 어떤 문자의 아스키코드가 더 작냐/같냐/크냐 판별
+>
 >   * 단순히 같다/틀리다를 비교하는 것이 아니다.
-> * 
+>
+>   
+>
+> * 사전식 순서(아스키 코드(10진수))
+>
+>   * ABCD < ABCE
+>   * abcd > ABCD
+>
+> * **compare_string()** 의 반환값
+>
+>   * 같다 : 0
+>   * 좌항이 작다 : <0
+>   * 좌항이 크다 : >0
+>   * 음수도 반환하므로 반환형은 int
+>
+>   ```c
+>   int compare_string(const char* str0, const char* str1);
+>   ```
+
+
+
+# 효율적인 문자열 비교 함수 작성 방법
+
+>
+
+
 
 
 
