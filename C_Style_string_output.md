@@ -112,9 +112,11 @@
 >* strcpy**(string copy)** 
 >
 >* ```c
->  char* strcpy(char* dest, const char* src);
->  ```
->```
+> char* strcpy(char* dest, const char* src);
+> ```
+> ```
+>
+> ```
 >
 >```
 >
@@ -132,14 +134,16 @@
 >
 >
 >
->​```c
-> 			strcpy()                               strncpy()
->       위험할 수 있는 함수                       strcpy()보다 안전
->       dest 크기 < src 크기                        덜 빠르다
->       잘못된 메모리 쓰기 발생           덜 빠른 이유 : dest의 남은 요소를 0으로 채움
->  두 크기를 확실히 통제 가능 => 안전              count보다 src가 길 경우
->                                           => 다 복사하고 널 문자 X
->           								프로그래머가 널 문자 넣어줘야 한다.
+>```c
+>			strcpy()                               strncpy()
+>      위험할 수 있는 함수                       strcpy()보다 안전
+>      dest 크기 < src 크기                        덜 빠르다
+>      잘못된 메모리 쓰기 발생           덜 빠른 이유 : dest의 남은 요소를 0으로 채움
+> 두 크기를 확실히 통제 가능 => 안전              count보다 src가 길 경우
+>                                          => 다 복사하고 널 문자 X
+>          								프로그래머가 널 문자 넣어줘야 한다.
+>
+>```
 >
 >```
 >
@@ -166,5 +170,20 @@
 
 ## 문자열 찾기
 
-> ​	
+> * 문자열 속에서 문자열 찾기
+>
+>   ```c
+>   char* strstr(const char* str, const char* substr);
+>   ```
+>
+>   * <string.h> 안에 있다.
+>   * 반환값 : char 포인터
+>     * substr이 str에 있다 : 해당 substr이 시작하는 주소
+>     * substr이 str에 없다 : NULL(널 포인터)
+
+
+
+## 문자열 토큰화
+
+> * 
 
