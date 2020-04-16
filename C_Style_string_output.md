@@ -109,27 +109,33 @@
 ### 문자열 복사,strcpy(),strncpy()
 
 >* char* strcpy (char* dest, const char* src);
-> * <string.h> 안에 있다.
-> * 반환값 **char*** : dest를 반환
-> * src와 dest의 크기를 확실하게 통제 가능하다면 안전
-> * strncpy 사용하면 비교적 안전
-> * 프로그래머는 언제나 이렇게 코드 한 줄 추가
->     * strncpy(dest, src, DEST_SIZE);
+>    1. <string.h> 안에 있다.
+>
+>    2. 반환값 **char*** : dest를 반환
+>    3. src와 dest의 크기를 확실하게 통제 가능하다면 안전
+>    4. strncpy 사용하면 비교적 안전
+>
+>    5. 프로그래머는 언제나 이렇게 코드 한 줄 추가
+>
+>       strncpy(dest, src, DEST_SIZE);
 >       dest[DEST_SIZE - 1]= '\0'; /* 추가 */
 >
 >* **strcpy()**
->  * 위험할 수 있는 함수
->  *  dest 크기 < src 크기
->    * 잘못된 메모리 쓰기 발생
->    * 두 크기를 확실히 통제 가능 => 안전
+>    1. 위험할 수 있는 함수
+>    2. dest 크기 < src 크기
+>       - 잘못된 메모리 쓰기 발생
+>       - 두 크기를 확실히 통제 가능 => 안전
 >
->* strncpy()
->  * strcpy()보다 안전
->  * 덜 빠르다
->    * 덜 빠른 이유 : dest의 남은 요소를 0으로 채움
->  * count보다 src가 길 경우
->    * 다 복사하고 널 문자 X
->    * 프로그래머가 널 문자 넣어줘야 한다.
+>* **strncpy()**
+>    1. strcpy()보다 안전
+>    2. 덜 빠르다
+>       - 덜 빠른 이유 : dest의 남은 요소를 0으로 채움
+>
+>    3. count보다 src가 길 경우
+>
+>       - 다 복사하고 널 문자 X
+>
+>       - 프로그래머가 널 문자 넣어줘야 한다.
 
 
 
